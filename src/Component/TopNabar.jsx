@@ -1,23 +1,25 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image} from 'react-native'
+import { Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native'
 function TopNavbar() {
   return (
     <>
         <View>
-                 <View style={styles.headerBlock} >
+                <View style={styles.headerBlock} >
                     <View style={styles.logoTextBlock}>
                         <Image style={styles.logo}
                             source={require('../../assets/logo.png')}
                         />
                         <Text style={styles.schoolName}>
-                            Demo Public School
+                            DAV Public School
                         </Text>
                     </View>
-                    <View>
-                        <Image style={styles.notifiactionIcon}
-                            source={require('../../assets/notification.png')}
-                        />
-                    </View>
+                    <TouchableOpacity onPress={ () => alert("Notification!") }>
+                        <View>
+                            <Image style={styles.notifiactionIcon}
+                                source={require('../../assets/notification.png')}
+                            />
+                        </View>
+                    </TouchableOpacity>
                 </View>
         </View>
     </>
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 10
+        gap: 5 
     },
     headerBlock: {
         backgroundColor: '#194569',
