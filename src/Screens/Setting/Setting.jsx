@@ -14,6 +14,7 @@ const SettingView = ({leftIconName, title, rightIconName}) => {
             >
                 <Ionicons name={rightIconName} size={23} color='black' />
             </TouchableOpacity>
+            
         </View>
     )
 }
