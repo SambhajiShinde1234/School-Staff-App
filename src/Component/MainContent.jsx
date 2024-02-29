@@ -24,7 +24,7 @@ function MainContent() {
 const styles = StyleSheet.create({
    scrollViewContent: {
     backgroundColor: '#F8FDFF',
-    minHeight: 870
+    minHeight: 870,
    }
   });
   

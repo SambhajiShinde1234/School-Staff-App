@@ -4,27 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons'; // Import Ionicons from @expo/vector-icons
 import Home from './src/Screens/Home/Home';
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import Setting from './src/Screens/Setting/Setting'
+import Meassaging from './src/Screens/Messaging/Messaging'
 
 function ProfileScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Profile!</Text>
-    </View>
-  );
-}
-
-function MessagingScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Meassages!</Text>
     </View>
   );
 }
@@ -48,15 +34,14 @@ export default function App() {
             iconName = focused ? 'person' : 'person-outline';
           }
 
-          // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
         headerShown: false
       })}>
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Setting" component={SettingsScreen} />
-        <Tab.Screen name="Messaging" component={MessagingScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Setting" component={Setting} />
+        <Tab.Screen name="Messaging" component={Meassaging} />
+        <Tab.Screen name="Profile" component={Setting} />
       </Tab.Navigator>
     </NavigationContainer>
   );
