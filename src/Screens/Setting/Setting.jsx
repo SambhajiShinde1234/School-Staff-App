@@ -51,19 +51,15 @@ const Setting = () => {
 const styles = StyleSheet.create({
     settingText: {
         color: '#FFF',
-        fontSize: 25,
+        fontSize: 20,
         letterSpacing: 0.2,
-        fontWeight: 'bold',
         backgroundColor: '#194569',
         padding: 10,
-           
-        
     },
     heading: {
-        fontSize: 18,
+        fontSize: 16,
         lineHeight: 19,
         marginBottom: 15,
-        fontWeight: 'bold'
     },
     scrollViewContent: {
         minHeight: 700,
@@ -74,13 +70,12 @@ const styles = StyleSheet.create({
     iconHolder: {
         borderWidth: 1,
         borderColor: '#A5D6FF',
-        borderRadius: 50,
+        borderRadius: 5,
         width: 35,
         height: 35,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFC672'
     },
     container: {
         display: 'flex',
@@ -88,15 +83,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 28,
-        borderWidth: 1,
-        borderColor: '#C0EDFF',
+        borderWidth: 2,
+        borderColor: '#FFF',
         backgroundColor: '#FFF',
-        padding: 7,
-        borderRadius: 50
+        padding: 10,
+        borderRadius: 5
     },
     titles: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 15,
         color: '#313131',
     }
 });

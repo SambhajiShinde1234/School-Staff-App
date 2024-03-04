@@ -18,29 +18,15 @@ const SettingView = ({leftIconName, title, rightIconName}) => {
     )
 }
 
-const Meassaging = () => {
+const Messaging = () => {
   return (
     <>
-        <Text style={styles.settingText}>Meassaging</Text>
+        <Text style={styles.settingText}>Messages</Text>
         <ScrollView 
           contentContainerStyle={styles.scrollViewContent}
           showsVerticalScrollIndicator={false}
         >
-        <Text style={styles.heading}>Profile</Text>
-        <SettingView leftIconName='person-outline' title='Edit Profile' rightIconName='chevron-forward-outline' />
-        <SettingView leftIconName='finger-print-outline' title='Change Password' rightIconName='chevron-forward-outline' />
-
-        <Text style={styles.heading}>Activities</Text>
-        <SettingView leftIconName='ribbon-outline' title='School Programs' rightIconName='chevron-forward-outline' />
-        <SettingView leftIconName='school-outline' title='College Programs' rightIconName='chevron-forward-outline' />
-
-
-        <Text style={styles.heading}>Notifications</Text>
-        <SettingView leftIconName='notifications-outline' title='Notifications' rightIconName='chevron-forward-outline' />
-
-        <Text style={styles.heading}>Regional</Text>
-        <SettingView leftIconName='location-outline' title='Languages' rightIconName='chevron-forward-outline' />
-        <SettingView leftIconName='log-out-outline' title='Logout' rightIconName='chevron-forward-outline' />
+       
     </ScrollView>
     </>
    
@@ -50,19 +36,15 @@ const Meassaging = () => {
 const styles = StyleSheet.create({
     settingText: {
         color: '#FFF',
-        fontSize: 25,
+        fontSize: 20,
         letterSpacing: 0.2,
-        fontWeight: 'bold',
         backgroundColor: '#194569',
         padding: 10,
-           
-        
     },
     heading: {
-        fontSize: 18,
+        fontSize: 16,
         lineHeight: 19,
         marginBottom: 15,
-        fontWeight: 'bold'
     },
     scrollViewContent: {
         minHeight: 700,
@@ -90,14 +72,13 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#C0EDFF',
         backgroundColor: '#FFF',
-        padding: 7,
+        padding: 3,
         borderRadius: 50
     },
     titles: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 15,
         color: '#313131',
     }
 });
 
-export default Meassaging
+export default Messaging

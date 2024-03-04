@@ -6,14 +6,7 @@ import { Ionicons } from '@expo/vector-icons'; // Import Ionicons from @expo/vec
 import Home from './src/Screens/Home/Home';
 import Setting from './src/Screens/Setting/Setting'
 import Meassaging from './src/Screens/Messaging/Messaging'
-
-function ProfileScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
-    </View>
-  );
-}
+import Profile from './src/Screens/Profile/Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -41,7 +34,7 @@ export default function App() {
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Setting" component={Setting} />
         <Tab.Screen name="Messaging" component={Meassaging} />
-        <Tab.Screen name="Profile" component={Setting} />
+        <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );
