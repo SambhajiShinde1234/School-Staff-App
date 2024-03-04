@@ -1,20 +1,16 @@
 import React from 'react'
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Image } from 'react-native'
-import {PROFILE_DATA} from '../../DummyData/ProfileData'
 
 const Messaging = () => {
   return (
     <>
         <Text style={styles.settingText}>Messages</Text>
-        <ScrollView 
-          contentContainerStyle={styles.scrollViewContent}
-          showsVerticalScrollIndicator={false}
-        >
-          
-        
-        </ScrollView>
+        <View style={styles.container}>
+          <Text>
+            No Messages
+          </Text>
+        </View>
     </>
-   
   )
 }
 
@@ -26,11 +22,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#194569',
         padding: 10,
     },
-    scrollViewContent: {
-        minHeight: 700,
-        paddingTop: 12,
-        paddingHorizontal: 10,
-        backgroundColor:'#F8FDFF'
+    container: {
+        minHeight: 500,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 });
 
