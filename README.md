@@ -12,10 +12,10 @@
 ## Home screen 
 ![school-staff-screen image](https://github.com/SambhajiShinde1234/School-Staff-App/assets/98042156/e8bc7dd4-9f9c-4104-b3a1-eadc1b2f3070)
 
-## Settings screen 
+## Profile screen 
 ![Screenshot_2024-03-04-23-45-26-58](https://github.com/SambhajiShinde1234/School-Staff-App/assets/98042156/e40fdf63-0504-4b8d-a86f-4c56ce305df6)
 
-## Profile screen 
+## Settings screen 
 ![Screenshot_2024-03-04-23-45-19-42](https://github.com/SambhajiShinde1234/School-Staff-App/assets/98042156/9f44162f-f2f7-424c-951c-1e881fbb0882)
 
 
