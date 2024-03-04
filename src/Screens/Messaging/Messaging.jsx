@@ -1,22 +1,6 @@
 import React from 'react'
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
-
-const SettingView = ({leftIconName, title, rightIconName}) => {
-    return(
-        <View style={styles.container}>
-            <View style={styles.iconHolder}>
-                <Ionicons name={leftIconName} size={23} color='black' />
-            </View>
-            <Text style={styles.titles}>{title}</Text>
-            <TouchableOpacity
-                onPress={() => alert(title)}
-            >
-                <Ionicons name={rightIconName} size={23} color='black' />
-            </TouchableOpacity>
-        </View>
-    )
-}
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import {PROFILE_DATA} from '../../DummyData/ProfileData'
 
 const Messaging = () => {
   return (
@@ -26,8 +10,21 @@ const Messaging = () => {
           contentContainerStyle={styles.scrollViewContent}
           showsVerticalScrollIndicator={false}
         >
-       
-    </ScrollView>
+            <View style={styles.imgContainer}>
+                <Text style={styles.name}>Perry Thomas</Text>
+            </View>
+            {
+                PROFILE_DATA.map((item) => {
+                    return(
+                        <View key={item.id} style={styles.container}>
+                            <Text style={styles.title}>{item.title}</Text>
+                            <Text style={styles.details}>{item.name}</Text>
+                        </View>
+                    )
+                })
+            }
+           
+        </ScrollView>
     </>
    
   )
@@ -41,44 +38,65 @@ const styles = StyleSheet.create({
         backgroundColor: '#194569',
         padding: 10,
     },
-    heading: {
-        fontSize: 16,
-        lineHeight: 19,
-        marginBottom: 15,
-    },
     scrollViewContent: {
         minHeight: 700,
         paddingTop: 12,
         paddingHorizontal: 10,
         backgroundColor:'#F8FDFF'
     },
+    imgContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        gap: 10,
+        alignItems: 'center',
+        borderColor: '#C0EDFF',
+        padding: 10,
+        borderRadius: 5,
+        marginBottom: 20
+    },
+    image: {
+        height: 100,
+        width: 100,
+        resizeMode:'contain',
+        borderRadius: 100,
+    },
     iconHolder: {
-        borderWidth: 1,
-        borderColor: '#A5D6FF',
-        borderRadius: 50,
-        width: 35,
-        height: 35,
+        borderWidth: 10,
+        borderColor: '#FFF',
+        borderRadius: 100,
+        width: 130,
+        height: 130,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFC672'
     },
     container: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 28,
-        borderWidth: 1,
-        borderColor: '#C0EDFF',
+        borderWidth: 2,
+        borderColor: '#FFF',
         backgroundColor: '#FFF',
-        padding: 3,
-        borderRadius: 50
+        padding: 15,
+        borderRadius: 5,
+        marginBottom: 10
     },
-    titles: {
-        fontSize: 15,
+    name: {
+        fontSize: 18,
         color: '#313131',
+        fontWeight: 'bold'
+    },
+    title: {
+        fontSize: 14,
+        color: '#313131',
+    },
+    details: {
+        fontSize: 14,
+        color: '#313131',
+        fontWeight: 'bold'
     }
 });
 
-export default Messaging
+export default Messaging;
