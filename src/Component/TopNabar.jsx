@@ -10,7 +10,7 @@ function TopNavbar() {
                             source={require('../../assets/logo.png')}
                         />
                         <Text style={styles.schoolName}>
-                            Demo Public School
+                            Public School
                         </Text>
                     </View>
                     <TouchableOpacity onPress={ () => alert("Notification!") }>

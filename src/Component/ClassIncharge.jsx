@@ -8,7 +8,7 @@ const Item = ({ item }) => (
      <View style={styles.imageHolder}>
         <Image 
          style={styles.image}
-         source={require('../../assets/techearImage.png')} 
+         source={require('../../assets/teacherbg.png')} 
         />
      </View>
         <Text style={styles.name}>{item.name}</Text>
